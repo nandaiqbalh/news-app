@@ -18,7 +18,7 @@
 
     <TextView
         android:id="@+id/textView2"
-        style="@style/ObTitle"
+        style="@style/TVObTitle"
         android:text="@string/title_ob_two"
         app:layout_constraintBottom_toTopOf="@+id/textView3"
         app:layout_constraintEnd_toEndOf="parent"
@@ -26,7 +26,7 @@
 
     <TextView
         android:id="@+id/textView3"
-        style="@style/ObDesc"
+        style="@style/TVObDesc"
         android:text="@string/desc_ob_two"
         app:layout_constraintBottom_toTopOf="@+id/btn_next"
         app:layout_constraintEnd_toEndOf="parent"

@@ -10,4 +10,15 @@
     <string name="desc_ob_two">Find the news you want based on your keywords.</string>
     <string name="title_ob_three">Save News</string>
     <string name="desc_ob_three">Save the news you want to read later\njust with one click.</string>
+    <string name="menu_breaking_news">Breaking News</string>
+    <string name="menu_search">Search</string>
+    <string name="menu_saved_news">Saved News</string>
+    <string name="hint_etsearch">Search News</string>
+    <string name="tv_hello_title">Hello, there!</string>
+    <string name="tv_hello_desc">Let\'s discover the world!</string>
+    <string name="tv_saved_desc">Your saved news will appear here!</string>
+    <string name="item_published_at">PUBLISHED AT</string>
+    <string name="item_description">DESCRIPTION</string>
+    <string name="item_title">TITLE</string>
+    <string name="item_source">SOURCE</string>
 </resources>
