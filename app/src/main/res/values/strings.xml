@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">NewsApp</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="btn_next">Next</string>
+    <string name="btn_skip">Skip</string>
+    <string name="desc_ob_one">With NewsApp, you can discover\nthe world with various feature.</string>
+    <string name="title_ob_one">Get to know us!</string>
+    <string name="title_ob_two">Search News</string>
+    <string name="desc_ob_two">Find the news you want based on your keywords.</string>
+    <string name="title_ob_three">Save News</string>
+    <string name="desc_ob_three">Save the news you want to read later\njust with one click.</string>
 </resources>
