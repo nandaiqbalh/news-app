@@ -7,7 +7,9 @@ import android.view.View
 import android.view.ViewGroup
 import com.nandaiqbalh.newsapp.R
 import com.nandaiqbalh.newsapp.databinding.FragmentSearchBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class SearchFragment : Fragment() {
 
 	private var _binding: FragmentSearchBinding? = null

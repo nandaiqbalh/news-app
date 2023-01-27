@@ -8,7 +8,9 @@ import android.view.ViewGroup
 import com.nandaiqbalh.newsapp.R
 import com.nandaiqbalh.newsapp.databinding.FragmentArticleBinding
 import com.nandaiqbalh.newsapp.databinding.FragmentSearchBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class ArticleFragment : Fragment() {
 
 	private var _binding: FragmentArticleBinding? = null
