@@ -43,6 +43,16 @@ class BreakingNewsFragment : Fragment() {
 		super.onViewCreated(view, savedInstanceState)
 		observeData()
 		setupRecyclerView()
+
+		newsAdapter.setOnItemClickListener {
+			val bundle = Bundle().apply {
+				putSerializable("article", it)
+			}
+			findNavController().navigate(
+				R.id.action_breakingNewsFragment_to_articleFragment,
+				bundle
+			)
+		}
 	}
 
 	private fun observeData() {

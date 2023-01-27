@@ -15,8 +15,6 @@ interface ApiServiceNews {
 		countryCode: String = "id",
 		@Query("page")
 		pageNumber: Int = 1,
-		@Query("apiKey")
-		apiKey: String = API_KEY
 	): Response<NewsResponse>
 
 	@GET("everything")
@@ -25,7 +23,5 @@ interface ApiServiceNews {
 		searchQuery: String,
 		@Query("page")
 		pageNumber: Int = 1,
-		@Query("apiKey")
-		apiKey: String = API_KEY
 	): Response<NewsResponse>
 }
