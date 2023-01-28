@@ -24,10 +24,6 @@ class NewsAdapter : RecyclerView.Adapter<NewsAdapter.NewsViewHolder>() {
 
     val differ = AsyncListDiffer(this, diffCallback)
 
-    fun submitList(movie: List<Article>?) {
-        differ.submitList(movie)
-    }
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NewsViewHolder {
         val binding =
             ItemArticlePreviewBinding.inflate(LayoutInflater.from(parent.context), parent, false)

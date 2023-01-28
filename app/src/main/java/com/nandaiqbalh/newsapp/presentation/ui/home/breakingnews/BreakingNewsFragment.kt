@@ -2,8 +2,6 @@ package com.nandaiqbalh.newsapp.presentation.ui.home.breakingnews
 
 import android.content.ContentValues.TAG
 import android.os.Bundle
-import android.text.Editable
-import android.text.TextWatcher
 import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -31,7 +29,7 @@ class BreakingNewsFragment : Fragment() {
 
 	private val viewModel: NewsViewModel by activityViewModels()
 
-	lateinit var newsAdapter: NewsAdapter
+	private lateinit var newsAdapter: NewsAdapter
 
 	override fun onCreateView(
 		inflater: LayoutInflater, container: ViewGroup?,
@@ -97,7 +95,7 @@ class BreakingNewsFragment : Fragment() {
 	var isLastPage = false
 	var isScrolling = false
 
-	val scrollListener = object : RecyclerView.OnScrollListener() {
+	private val scrollListener = object : RecyclerView.OnScrollListener() {
 		override fun onScrolled(recyclerView: RecyclerView, dx: Int, dy: Int) {
 			super.onScrolled(recyclerView, dx, dy)
 

@@ -42,7 +42,7 @@ class OnboardOneFragment : Fragment() {
 		binding.btnSkip.setOnClickListener {
 			startActivity(Intent(requireContext(), HomeActivity::class.java))
 			activity?.finish()
-			activity?.overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out);
+			activity?.overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
 
 			// set status on boarding
 			viewModel.setStatusOnboarding(true)

@@ -23,7 +23,7 @@ class ArticleFragment : Fragment() {
 	private val viewModel: NewsViewModel by activityViewModels()
 
 
-	val args: ArticleFragmentArgs by navArgs()
+	private val args: ArticleFragmentArgs by navArgs()
 	override fun onCreateView(
 		inflater: LayoutInflater, container: ViewGroup?,
 		savedInstanceState: Bundle?
