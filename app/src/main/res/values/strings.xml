@@ -22,4 +22,5 @@
     <string name="item_title">TITLE</string>
     <string name="item_source">SOURCE</string>
     <string name="tv_empty_saved_list">Your saved news is empty!</string>
+    <string name="tv_error_connection">An error occured: No internet connection!</string>
 </resources>

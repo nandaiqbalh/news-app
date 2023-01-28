@@ -35,7 +35,6 @@ class SearchFragment : Fragment() {
 	private val viewModel: NewsViewModel by activityViewModels()
 
 	private lateinit var newsAdapter: NewsAdapter
-	private val TAG = "SearchNewsFragment"
 
 	override fun onCreateView(
 		inflater: LayoutInflater, container: ViewGroup?,
@@ -83,17 +82,21 @@ class SearchFragment : Fragment() {
 			when (response) {
 				is Resource.Success -> {
 					hideProgressBar()
+					binding.tvSearchEmpty.visibility = View.GONE
+
 					response.data?.let { newsResponse ->
 						newsAdapter.differ.submitList(newsResponse.articles.toList())
 						val totalPages = newsResponse.totalResults / Constants.QUERY_PAGE_SIZE + 2
 						isLastPage = viewModel.searchNewsPage == totalPages
+						if(isLastPage) {
+							binding.rvSearchNews.setPadding(0, 0, 0, 0)
+						}
 					}
 				}
 				is Resource.Error -> {
 					hideProgressBar()
-					response.message?.let { message ->
-						Log.e(TAG, "An error occured: $message")
-					}
+					binding.tvSearchEmpty.visibility = View.VISIBLE
+
 				}
 				is Resource.Loading -> {
 					showProgressBar()
@@ -134,8 +137,6 @@ class SearchFragment : Fragment() {
 			if(shouldPaginate) {
 				viewModel.searchNews(binding.etSearch.text.toString())
 				isScrolling = false
-			} else {
-				binding.rvSearchNews.setPadding(0, 0, 0, 0)
 			}
 		}
 

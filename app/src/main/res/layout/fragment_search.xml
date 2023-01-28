@@ -46,6 +46,17 @@
         </com.google.android.material.textfield.TextInputLayout>
     </com.google.android.material.appbar.AppBarLayout>
 
+    <TextView
+        android:id="@+id/tv_search_empty"
+        style="@style/TVDescText"
+        android:visibility="invisible"
+        android:text="@string/tv_error_connection"
+        android:textColor="@color/color_inactive"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvSearchNews"
         android:layout_width="match_parent"
