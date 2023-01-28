@@ -1,6 +1,5 @@
 package com.nandaiqbalh.newsapp.presentation.ui.home
 
-import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -9,7 +8,6 @@ import com.nandaiqbalh.newsapp.data.network.models.news.NewsResponse
 import com.nandaiqbalh.newsapp.data.repository.NewsRepository
 import com.nandaiqbalh.newsapp.other.wrapper.Resource
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import retrofit2.Response
 import javax.inject.Inject
@@ -58,5 +56,14 @@ class NewsViewModel @Inject constructor(
 			}
 		}
 		return Resource.Error(response.message())
+	}
+
+	fun saveArticle(article: Article) = viewModelScope.launch {
+		newsRepository.upsert(article)
+	}
+
+	fun getSavedNews() = newsRepository.getSavedNews()
+	fun deleteArticle(article: Article) = viewModelScope.launch {
+		newsRepository.deleteArticle(article)
 	}
 }
