@@ -11,6 +11,7 @@ interface NewsRepository {
 
 	suspend fun getBreakingNews(countryCode: String, pageNumber: Int): Response<NewsResponse>
 
+	suspend fun searchNews(query: String, pageNumber: Int): Response<NewsResponse>
 }
 
 class NewsRepositoryImpl @Inject constructor(
@@ -21,5 +22,7 @@ class NewsRepositoryImpl @Inject constructor(
 	override suspend fun getBreakingNews(countryCode: String, pageNumber: Int): Response<NewsResponse> =
 		newsRemoteDataSource.getBreakingNews(countryCode, pageNumber)
 
-
+	override suspend fun searchNews(query: String, pageNumber: Int): Response<NewsResponse> {
+		return newsRemoteDataSource.searchNews(query, pageNumber)
+	}
 }

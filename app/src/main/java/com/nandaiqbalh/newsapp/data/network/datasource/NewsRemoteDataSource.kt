@@ -10,6 +10,8 @@ interface NewsRemoteDataSource {
 
 	suspend fun getBreakingNews(countryCode: String, pageNumber: Int): Response<NewsResponse>
 
+	suspend fun searchNews(query: String, pageNumber: Int): Response<NewsResponse>
+
 }
 
 class NewsRemoteDataSourceImpl @Inject constructor(private val apiServiceNews: ApiServiceNews): NewsRemoteDataSource{
@@ -18,5 +20,7 @@ class NewsRemoteDataSourceImpl @Inject constructor(private val apiServiceNews: A
 		return apiServiceNews.getBreakingNews(countryCode, pageNumber)
 	}
 
-
+	override suspend fun searchNews(query: String, pageNumber: Int): Response<NewsResponse> {
+		return apiServiceNews.searchForNews(query, pageNumber)
+	}
 }
