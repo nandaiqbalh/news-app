@@ -38,6 +38,14 @@ class SavedFragment : Fragment() {
 
 		setupRecyclerView()
 
+		toDetailArticle()
+
+		dragArticle()
+
+		return binding.root
+	}
+
+	private fun toDetailArticle(){
 		newsAdapter.setOnItemClickListener {
 			val bundle = Bundle().apply {
 				putSerializable("article", it)
@@ -47,7 +55,9 @@ class SavedFragment : Fragment() {
 				bundle
 			)
 		}
+	}
 
+	private fun dragArticle(){
 		val itemTouchHelperCallback = object : ItemTouchHelper.SimpleCallback(
 			ItemTouchHelper.UP or ItemTouchHelper.DOWN,
 			ItemTouchHelper.LEFT or ItemTouchHelper.RIGHT
@@ -78,10 +88,13 @@ class SavedFragment : Fragment() {
 		}
 
 		viewModel.getSavedNews().observe(viewLifecycleOwner, Observer { articles ->
-			newsAdapter.differ.submitList(articles)
+			if (articles.isEmpty()){
+				binding.tvSavedEmpty.visibility = View.VISIBLE
+			} else {
+				newsAdapter.differ.submitList(articles)
+			}
 		})
 
-		return binding.root
 	}
 
 	private fun setupRecyclerView() {

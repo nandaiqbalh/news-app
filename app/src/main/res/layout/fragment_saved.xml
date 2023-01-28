@@ -23,6 +23,17 @@
         app:layout_constraintStart_toStartOf="parent"
         />
 
+    <TextView
+        android:id="@+id/tv_saved_empty"
+        style="@style/TVDescText"
+        android:visibility="invisible"
+        android:text="@string/tv_empty_saved_list"
+        android:textColor="@color/color_inactive"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvSavedNews"
         android:layout_width="match_parent"
