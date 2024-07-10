@@ -11,7 +11,7 @@ NewsApp is an android application which is used to read news. In this applicatio
 - Dagger Hilt
 - Github
 
-## Getting started
+## Run Project
 Download this repository extract and open the template folder on Android Studio
 that we advice to keep a clean project, you will however need to replace the secret keys with your own.
 
