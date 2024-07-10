@@ -1,19 +1,15 @@
+![news-app](https://github.com/nandaiqbalh/news-app/assets/70440045/aea05146-9c09-4dd7-af74-6830f88e7c2e)
+
 # NewsApp
 NewsApp is an android application which is used to read news. In this application, news headlines will be displayed on the breaking news page. In addition, users can search for news based on the keywords the user enters. As well as users can save the news they want to read at a later time.
 
 ## Clean architecture with MVVM Pattern
 - Kotlin
-- MVVM (Model, View, View Model)
-- Lottie Animation
-- Glide
 - Data Store
 - Room Database
 - Retrofit
-- Coroutine
 - Dagger Hilt
-- GIT
-
-![news-app](https://github.com/nandaiqbalh/news-app/assets/70440045/aea05146-9c09-4dd7-af74-6830f88e7c2e)
+- Github
 
 ## Getting started
 Download this repository extract and open the template folder on Android Studio
